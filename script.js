@@ -32,139 +32,141 @@ console.log(first_num);
 
 btn0.addEventListener('click', () => {
 
-    current_screen.textContent = 0;
-
-    if (first_num === '') {
-        first_num = 0;
+    if (first_num.length <= 5 && operator === '') {
+        first_num += 0;
+        current_screen.textContent = first_num;
     }
-    else if (second_num === '') {
-        second_num = 0;
-    }
-
-    operate(first_num,second_num,operator);
-
+    else if (second_num.length <= 5 && operator != '') {
+        second_num += 0;
+        current_screen.textContent = second_num;
+    } 
 });
 
 btn1.addEventListener('click', () => {
     
-    current_screen.textContent = 1;
 
-    if (first_num === '') {
-        first_num = 1;
+    if (first_num.length <= 5 && operator === '') {
+        first_num += 1;
+        current_screen.textContent = first_num;
     }
-    else if (second_num === '') {
-        second_num = 1;
+    else if (second_num.length <= 5 && operator != '') {
+        second_num += 1;
+        current_screen.textContent = second_num;
     }  
 
 });
 
 btn2.addEventListener('click', () => {
     
-    current_screen.textContent = 2;
-
-    if (first_num === '') {
-        first_num = 2;
+    if (first_num.length <= 5 && operator === '') {
+        first_num += 2;
+        current_screen.textContent = first_num;
     }
-    else if (second_num === '') {
-        second_num = 2;
-    }
+    else if (second_num.length <= 5 && operator != '') {
+        second_num += 2;
+        current_screen.textContent = second_num;
+    } 
     
-    console.log(first_num,second_num);
 
 });
 
 btn3.addEventListener('click', () => {
     
-    current_screen.textContent = 3;
-
-    if (first_num === '') {
-        first_num = 3;
+    if (first_num.length <= 5 && operator === '') {
+        first_num += 3;
+        current_screen.textContent = first_num;
     }
-    else if (second_num === '') {
-        second_num = 3;
-    } 
+    else if (second_num.length <= 5 && operator != '') {
+        second_num += 3;
+        current_screen.textContent = second_num;
+    }  
 
 });
 
 btn4.addEventListener('click', () => {
     
-    current_screen.textContent = 4;
-
-    if (first_num === '') {
-        first_num = 4;
+    if (first_num.length <= 5 && operator === '') {
+        first_num += 4;
+        current_screen.textContent = first_num;
     }
-    else if (second_num === '') {
-        second_num = 4;
+    else if (second_num.length <= 5 && operator != '') {
+        second_num += 4;
+        current_screen.textContent = second_num;
     } 
 
 });
 
 btn5.addEventListener('click', () => {
     
-    current_screen.textContent = 5;
-
-    if (first_num === '') {
-        first_num = 5;
+    if (first_num.length <= 5 && operator === '') {
+        first_num += 5;
+        current_screen.textContent = first_num;
     }
-    else if (second_num === '') {
-        second_num = 5;
+    else if (second_num.length <= 5 && operator != '') {
+        second_num += 5;
+        current_screen.textContent = second_num;
     } 
 
 });
 
 btn6.addEventListener('click', () => {
     
-    current_screen.textContent = 6;
-
-    if (first_num === '') {
-        first_num = 6;
+    if (first_num.length <= 5 && operator === '') {
+        first_num += 6;
+        current_screen.textContent = first_num;
     }
-    else if (second_num === '') {
-        second_num = 6;
-    }
+    else if (second_num.length <= 5 && operator != '') {
+        second_num += 6;
+        current_screen.textContent = second_num;
+    } 
 
 });
 
 btn7.addEventListener('click', () => {
     
-    current_screen.textContent = 7;
-
-    if (first_num === '') {
-        first_num = 7;
+    if (first_num.length <= 5 && operator === '') {
+        first_num += 7;
+        current_screen.textContent = first_num;
     }
-    else if (second_num === '') {
-        second_num = 7;
-    }
+    else if (second_num.length <= 5 && operator != '') {
+        second_num += 7;
+        current_screen.textContent = second_num;
+    } 
 
 });
 
 btn8.addEventListener('click', () => {
     
-    current_screen.textContent = 8;
-
-    if (first_num === '') {
-        first_num = 8;
+    if (first_num.length <= 5 && operator === '') {
+        first_num += 8;
+        current_screen.textContent = first_num;
     }
-    else if (second_num === '') {
-        second_num = 8;
-    }
+    else if (second_num.length <= 5 && operator != '') {
+        second_num += 8;
+        current_screen.textContent = second_num;
+    } 
 
 });
 
 btn9.addEventListener('click', () => {
     
-    current_screen.textContent = 9;
-
-    if (first_num === '') {
-        first_num = 9;
+    if (first_num.length <= 5 && operator === '') {
+        first_num += 9;
+        current_screen.textContent = first_num;
     }
-    else if (second_num === '') {
-        second_num = 9;
-    }
+    else if (second_num.length <= 5 && operator != '') {
+        second_num += 9;
+        current_screen.textContent = second_num;
+    } 
 
 });
 
 btn_add.addEventListener('click', () => {
+
+    if (operator != '') {
+
+        run_op();
+    }
     
     current_screen.textContent = '+';
     operator = '+';
@@ -172,6 +174,11 @@ btn_add.addEventListener('click', () => {
 });
 
 btn_sub.addEventListener('click', () => {
+
+    if (operator != '') {
+
+        run_op();
+    }
     
     current_screen.textContent = '-';
     operator = '-';
@@ -179,6 +186,11 @@ btn_sub.addEventListener('click', () => {
 });
 
 btn_mul.addEventListener('click', () => {
+
+    if (operator != '') {
+
+        run_op();
+    }
     
     current_screen.textContent = '*';
     operator = '*';
@@ -186,22 +198,28 @@ btn_mul.addEventListener('click', () => {
 });
 
 btn_div.addEventListener('click', () => {
+
+    if (operator != '') {
+
+        run_op();
+    }
     
     current_screen.textContent = '/';
     operator = '/';
 
 });
 
-btn_eq.addEventListener('click', () => {
 
-    const result = operate(first_num,second_num,operator);
-    
-    ans_screen.textContent = result;
-    first_num = result;
-    second_num = '';
+    btn_eq.addEventListener('click', () => {
+
+        run_op();
+
+        console.log(first_num,second_num);
 
 
-});
+    });
+
+
 
 btn_clr.addEventListener('click', () => {
     
@@ -210,6 +228,7 @@ btn_clr.addEventListener('click', () => {
 
     first_num = '';
     second_num = '';
+    operator = '';
 
 });
 
@@ -218,16 +237,16 @@ function operate(a,b,op){
 
     switch (op) {
         case '+':
-            return add(a,b);
+            return add(parseInt(a),parseInt(b));
 
         case '-':
-            return subtract(a,b);
+            return subtract(parseInt(a),parseInt(b));
 
         case '*':
-            return multiply(a,b);
+            return multiply(parseInt(a),parseInt(b));
 
         case '/':
-            return divide(a,b);
+            return divide(parseInt(a),parseInt(b));
 
     }
 }
@@ -239,5 +258,16 @@ add = (a,b) => a + b;
 subtract = (a,b) => a - b;
 multiply = (a,b) => a * b;
 divide = (a,b) => a / b;
+
+// function to operate
+
+function run_op() {
+
+    const result = operate(first_num,second_num,operator);  
+    ans_screen.textContent = result;
+    first_num = result;
+    second_num = '';
+
+}
 
 
