@@ -229,6 +229,8 @@ btn_eq.addEventListener('click', () => {
         if(operator === '/' && second_num === '0') {
 
             alert('Really?');
+            current_screen.textContent = 0;
+            ans_screen.textContent = 0;
             first_num = '';
             second_num = '';
             operator = '';
