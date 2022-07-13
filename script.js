@@ -163,7 +163,7 @@ btn9.addEventListener('click', () => {
 
 btn_add.addEventListener('click', () => {
 
-    if (operator != '') {
+    if (operator != '' && first_num != '' && second_num != '') {
 
         run_op();
     }
@@ -175,7 +175,7 @@ btn_add.addEventListener('click', () => {
 
 btn_sub.addEventListener('click', () => {
 
-    if (operator != '') {
+    if (operator != '' && first_num != '' && second_num != '') {
 
         run_op();
     }
@@ -187,7 +187,7 @@ btn_sub.addEventListener('click', () => {
 
 btn_mul.addEventListener('click', () => {
 
-    if (operator != '') {
+    if (operator != '' && first_num != '' && second_num != '') {
 
         run_op();
     }
@@ -199,7 +199,7 @@ btn_mul.addEventListener('click', () => {
 
 btn_div.addEventListener('click', () => {
 
-    if (operator != '') {
+    if (operator != '' && first_num != '' && second_num != '') {
 
         run_op();
     }
@@ -210,14 +210,24 @@ btn_div.addEventListener('click', () => {
 });
 
 
-    btn_eq.addEventListener('click', () => {
+btn_eq.addEventListener('click', () => {
 
-        run_op();
+    if (operator != '' && first_num != '' && second_num != '') {
 
-        console.log(first_num,second_num);
+        if(operator === '/' && second_num === '0') {
 
+            alert('Really?');
+            first_num = '';
+            second_num = '';
+            operator = '';
 
-    });
+        }
+        else {
+            run_op();
+        }      
+    }
+
+});
 
 
 
