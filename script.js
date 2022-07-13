@@ -30,6 +30,18 @@ console.log(first_num);
 
 //event listeners for buttons
 
+btn_decimal.addEventListener('click', () => {
+
+    if (first_num.length <= 5 && operator === '') {
+        first_num += '.';
+        current_screen.textContent = first_num;
+    }
+    else if (second_num.length <= 5 && operator != '') {
+        second_num += '.';
+        current_screen.textContent = second_num;
+    } 
+});
+
 btn0.addEventListener('click', () => {
 
     if (first_num.length <= 5 && operator === '') {
@@ -247,16 +259,16 @@ function operate(a,b,op){
 
     switch (op) {
         case '+':
-            return add(parseInt(a),parseInt(b));
+            return add(parseFloat(a,10),parseFloat(b,10));
 
         case '-':
-            return subtract(parseInt(a),parseInt(b));
+            return subtract(parseFloat(a,10),parseFloat(b,10));
 
         case '*':
-            return multiply(parseInt(a),parseInt(b));
+            return multiply(parseFloat(a,10),parseFloat(b,10));
 
         case '/':
-            return divide(parseInt(a),parseInt(b));
+            return divide(parseFloat(a,10),parseFloat(b,10));
 
     }
 }
